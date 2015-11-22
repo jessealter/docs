@@ -87,23 +87,23 @@ By default, password authentication is used to connect to your Linode via SSH. A
 
     This can be done using PuTTY as outlined in our guide: [Use Public Key Authentication with SSH](/docs/security/use-public-key-authentication-with-ssh#windows-operating-system).
 
-2.  Upload the public key to your Linode. The `linde_user` should be the user you plan to administer the server as.
+2.  Upload the public key to your Linode. The `linode_user` should be the user you plan to administer the server as.
 
     **Linux**
 
     From your local computer:
 
-        ssh-copy-id example_user@123.456.78.0
+        ssh-copy-id example_user@123.456.78.9
 
     **OS X**
 
     On your Linode:
 
-        sudo mkdir ~/.ssh && sudo chmod -R 700
+        mkdir ~/.ssh && chmod -R 700 ~/.ssh
 
     From your local computer:
 
-        scp ~/.ssh/id_rsa.pub example_user@123.456.78.9:~/.ssh/authorized_keys
+        scp ~/.ssh/id_rsa.pub linode_user@123.456.78.9:~/.ssh/authorized_keys
 
     {: .note}
     >
